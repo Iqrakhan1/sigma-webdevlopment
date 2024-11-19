@@ -1,72 +1,107 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-    --primary: rgb(236, 5, 47);
-    --secondry: rgb(255, 158, 158);
-    --textcolor: white;
+  --primary: rgb(141, 140, 140);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(219, 216, 216);
+  font-family: "Sour Gummy", sans-serif;
+}
+.card {
+  background-color: white;
+  width: 300px;
+  padding: 10px 13px 30px 10px;
+  margin: 35px auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.card img {
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+img:hover,
+.card:hover {
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+}
+.tag {
+  margin: 10px 0 20px 0;
+}
+.tag span {
+  margin: 8px;
+  border: 2px solid var(--primary);
+  padding: 4px 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  color: var(--primary);
+  font-size: 12px;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 25px 0 15px 10px;
+}
+p {
+  color: var(--primary);
+  margin: 0 10px;
+  font-size: 15px;
+}
+.btn button {
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 20px 0 0 0;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  color: rgb(25, 176, 240);
+  background-color: rgba(148, 205, 240, 0.379);
+  border: none;
+  cursor: pointer;
+}
+.btn {
+  text-align: center;
+}
+
+button:hover {
+  background-color: lightskyblue;
+
+  color: black;
+}
+
+@media screen and (max-width: 426px) {
+  .card {
+    margin: 10px auto;
   }
-  * {
-    margin: 0;
-    padding: 0;
+  .card img {
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px auto;
   }
-  body {
-    background-color: var(--secondry);
+  h2 {
+    font-size: 20px;
   }
-  
-  nav {
-    display: flex;
-    background-color: var(--primary);
-    padding: 5px 60px;
-    justify-content: space-between;
+  p {
+    font-size: 12px;
   }
-  ul {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  ul li {
-    list-style: none;
-    background-color: var(--textcolor);
-    color: black;
-    font-size: 18px;
-    letter-spacing: 2px;
-    padding: 3px 15px;
-    border-radius: 6px;
-  }
-  nav img {
-    height: 50px;
-    border-radius: 50%;
-    margin: 5px;
-  }
-  ul li:hover {
-    background-color: rgb(252, 112, 130);
-    cursor: pointer;
-    color: white;
-  }
-  @media only screen and (max-width: 455px) {
-    nav {
-    
-      padding: 5px 10px;
-      justify-content: space-between;
-    }
-    ul {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    ul li {
-     
-      font-size: 10px;
-      letter-spacing: 1px;
-      padding: 2px 8px;
-      border-radius: 6px;
-    }
-    nav img {
-      height: 20px;
-      border-radius: 50%;
-      margin: 2px;
-    }
-    ul li:hover {
-      background-color: rgb(252, 112, 130);
-      cursor: pointer;
-      color: white;
-    }
-  }
+}
