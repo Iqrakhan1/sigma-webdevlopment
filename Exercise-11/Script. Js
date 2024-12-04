@@ -1,0 +1,28 @@
+let num =5;
+//using reduce method
+function fact(number){
+    let array = Array.from(Array(number+1).keys())
+array  =  array.slice(1);
+    console.log(array)
+   return array.reduce((a,b)=>
+        {
+            return a*b
+        });
+}
+console. log("The factorial of "+ num + " is " + fact(num));
+
+
+// using for loop
+function factfor(number){ 
+    let fact =1;
+    for(let i =1;i<=number; i++)
+    {
+        
+        fact = fact*i;
+        
+    }
+                return fact;         
+
+}
+
+console.log(factfor(num));
