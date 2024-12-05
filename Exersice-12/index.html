@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rendom color genrator</title>
+  <style>
+    *{
+  margin:0;
+  padding:0;
+}
+.container{
+  padding-top:100px;
+  height:400px;
+  display:flex;
+/*   align-items:center; */
+  justify-content:center;
+  gap:20px;
+  
+}
+.box{
+  width:50px;
+  height:50px;
+  border:2px solid black;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">box</div>
+    <div class="box">box</div>
+    <div class="box">box</div>
+    <div class="box">box</div>
+    <div class="box">box</div>
+  </div> 
+  
+  <script>
+    console.log("JavaScript file initialized...");
+
+// Function to generate a random RGB color
+function randomColor() {
+  let val1 = Math.floor(Math.random() * 256); // Range: 0-255
+  let val2 = Math.floor(Math.random() * 256);
+  let val3 = Math.floor(Math.random() * 256);
+  return `rgb(${val1}, ${val2}, ${val3})`;
+}
+
+console.log(randomColor());
+
+// Access the container element(s)
+let boxes = document.getElementsByClassName("box");
+// console.log(boxes);
+
+Array.from(boxes).forEach(e => 
+                         e.style.backgroundColor=randomColor())
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
